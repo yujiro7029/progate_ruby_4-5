@@ -10,10 +10,9 @@ drink2= Drink.new(name: "お茶", price: 200, amount: 400)
 
 menus=[food1,food2,drink1,drink2]
 
-index= 0
-menus.each do |menu|
-  puts "#{index}.#{menu.info}"
-  index+=1
+menus.each.with_index(1) do |menu,i|
+
+  puts "#{i}.#{menu.info}"
 end
 
 puts "-----------------"
